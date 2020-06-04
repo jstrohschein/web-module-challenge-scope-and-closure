@@ -68,7 +68,7 @@ dansRoll();
 
 a. Where is closure used in this code? How can you tell?
 
-  - Closure is used here when the return value of the higher order function is another function.
+  - Closure is used here when the return value of the higher order function is another, internal function whos scope includes the higher order function.
 
 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
