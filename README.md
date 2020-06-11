@@ -42,7 +42,11 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
-2. Study the following code, then answer the questions below.
+
+  - Closure is easiest to think about like a bundle. Within the bundle (i.e., the Lexical Environment), the function has everything it needs to work properly. For example: I want to perform an action on a variable within the function. If the function is able to perform this action (print, arithmetic, etc.) because the variable is defined and in scope then we can say that the variable has closure. Also, in most other languages, local variables are not directly accessible outside of the function in which they are defined and effectively disappear after it is finished executing. However, with closure in js, a function within a parent function is able to remember the variables and they can be used outside the scope of the parent by proxy.
+
+
+2. Study the following code, then answer the questions below. 
 
 ```js
 function personalDice(name){
@@ -63,8 +67,21 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+  - Closure is used here when the return value of the higher order function is another, internal function whos scope includes the higher order function.
+
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+  - Dan is always the value of {name} and {newRoll} will randomly be between 1 and 6.
+
+
 c. What is the lexical scope of `newRoll`? 
+
+  - Everything within the low order function, high order function, and globally defined variables.
+
+
+  
 
 ### Task 3 - Stretch Goals
 
